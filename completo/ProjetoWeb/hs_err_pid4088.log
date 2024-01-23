@@ -1,0 +1,158 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (exceptions.cpp:427), pid=4088, tid=0x00000cf0
+#  fatal error: ExceptionMark destructor expects no pending exceptions
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_92-b14) (build 1.8.0_92-b14)
+# Java VM: Java HotSpot(TM) Client VM (25.92-b14 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0171c000):  JavaThread "main" [_thread_in_vm, id=3312, stack(0x01620000,0x01670000)]
+
+Stack: [0x01620000,0x01670000],  sp=0x0166f774,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1a8c1b]
+V  [jvm.dll+0x1a1406]
+V  [jvm.dll+0x1a1e5a]
+V  [jvm.dll+0x17c789]
+V  [jvm.dll+0xe59e1]
+C  [java.exe+0x14c6]
+C  [java.exe+0x203a]
+C  [java.exe+0xaeaf]
+C  [java.exe+0xaf39]
+C  [KERNEL32.DLL+0x1866]
+C  [ntdll.dll+0x368f1]
+C  [ntdll.dll+0x3689d]
+C  0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x14129000 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=3748, stack(0x14750000,0x147a0000)]
+  0x14128400 JavaThread "Attach Listener" daemon [_thread_blocked, id=764, stack(0x14700000,0x14750000)]
+  0x14126000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3652, stack(0x146b0000,0x14700000)]
+  0x14109000 JavaThread "Finalizer" daemon [_thread_blocked, id=3188, stack(0x14340000,0x14390000)]
+  0x01b7ec00 JavaThread "Reference Handler" daemon [_thread_blocked, id=3568, stack(0x142f0000,0x14340000)]
+=>0x0171c000 JavaThread "main" [_thread_in_vm, id=3312, stack(0x01620000,0x01670000)]
+
+Other Threads:
+  0x01b7c000 VMThread [stack: 0x01720000,0x01770000] [id=2720]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 4928K, used 353K [0x03c00000, 0x04150000, 0x09150000)
+  eden space 4416K,   8% used [0x03c00000, 0x03c58648, 0x04050000)
+  from space 512K,   0% used [0x04050000, 0x04050000, 0x040d0000)
+  to   space 512K,   0% used [0x040d0000, 0x040d0000, 0x04150000)
+ tenured generation   total 10944K, used 0K [0x09150000, 0x09c00000, 0x13c00000)
+   the space 10944K,   0% used [0x09150000, 0x09150000, 0x09150200, 0x09c00000)
+ Metaspace       used 1343K, capacity 2240K, committed 2240K, reserved 4480K
+
+Card table byte_map: [0x13c00000,0x13c90000] byte_map_base: 0x13be2000
+
+Polling page: 0x01670000
+
+CodeCache: size=32768Kb used=633Kb max_used=633Kb free=32134Kb
+ bounds [0x01b80000, 0x01c20000, 0x03b80000]
+ total_blobs=131 nmethods=0 adapters=65
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (4 events):
+Event: 0.046 Thread 0x0171c000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x03c06ea8) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u92\6642\hotspot\src\share\vm\p,çQﬂ/éß?
+Event: 0.046 Thread 0x0171c000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x03c07178) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u92\6642\hotspot\src\share\vm\prims\jni.cpp, lineå9"V≥ñ∏?
+Event: 0.096 Thread 0x0171c000 Exception <a 'java/lang/ClassFormatError': Unknown constant tag 110 in class file java/lang/invoke/MethodHandleImpl> (0x03c4e4f0) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u92\6642\hotspot\src\share\vm\classfile\classFileError.cpp, line 43]ì%§∫ò∏?
+Event: 0.096 Thread 0x0171c000 Exception <a 'java/lang/ClassFormatError'> (0x03c4e4f0) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u92\6642\hotspot\src\share\vm\oops\instanceKlass.cpp, line 948]
+
+Events (10 events):
+Event: 0.080 loading class sun/misc/Launcher$AppClassLoader$1 done
+Event: 0.090 loading class java/lang/SystemClassLoaderAction
+Event: 0.090 loading class java/lang/SystemClassLoaderAction done
+Event: 0.090 Thread 0x14126000 Thread added: 0x14126000
+Event: 0.090 Thread 0x14128400 Thread added: 0x14128400
+Event: 0.090 Thread 0x14129000 Thread added: 0x14129000
+Event: 0.096 loading class java/lang/invoke/MethodHandleImpl
+Event: 0.096 loading class java/lang/ClassFormatError
+Event: 0.096 loading class java/lang/ClassFormatError done
+Event: 0.096 loading class java/lang/invoke/MethodHandleImpl done
+
+
+Dynamic libraries:
+0x00180000 - 0x001b3000 	C:\Program Files\Java\jdk1.8.0_92\jre\bin\java.exe
+0x77550000 - 0x776b7000 	C:\Windows\SYSTEM32\ntdll.dll
+0x77060000 - 0x77158000 	C:\Windows\system32\KERNEL32.DLL
+0x74c30000 - 0x74ced000 	C:\Windows\system32\KERNELBASE.dll
+0x6b050000 - 0x6b0f7000 	C:\Windows\system32\apphelp.dll
+0x757e0000 - 0x7588e000 	C:\Windows\system32\ADVAPI32.dll
+0x75890000 - 0x759b1000 	C:\Windows\system32\USER32.dll
+0x728c0000 - 0x72ab7000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9200.16384_none_893961408605e985\COMCTL32.dll
+0x759c0000 - 0x75a71000 	C:\Windows\system32\msvcrt.dll
+0x773d0000 - 0x77404000 	C:\Windows\SYSTEM32\sechost.dll
+0x75c40000 - 0x75d12000 	C:\Windows\system32\RPCRT4.dll
+0x75690000 - 0x7579a000 	C:\Windows\system32\GDI32.dll
+0x76e00000 - 0x76e2b000 	C:\Windows\system32\IMM32.DLL
+0x75210000 - 0x752ec000 	C:\Windows\system32\MSCTF.dll
+0x6c070000 - 0x6c12f000 	C:\Program Files\Java\jdk1.8.0_92\jre\bin\msvcr100.dll
+0x6b8a0000 - 0x6bc6b000 	C:\Program Files\Java\jdk1.8.0_92\jre\bin\client\jvm.dll
+0x70ef0000 - 0x70ef8000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x72360000 - 0x72381000 	C:\Windows\SYSTEM32\WINMM.dll
+0x6e7a0000 - 0x6e7a8000 	C:\Windows\SYSTEM32\VERSION.dll
+0x773c0000 - 0x773c6000 	C:\Windows\system32\PSAPI.DLL
+0x754d0000 - 0x75520000 	C:\Windows\system32\WS2_32.dll
+0x722e0000 - 0x7230a000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x75060000 - 0x75068000 	C:\Windows\system32\NSI.dll
+0x70a10000 - 0x70a1c000 	C:\Program Files\Java\jdk1.8.0_92\jre\bin\verify.dll
+0x6e320000 - 0x6e341000 	C:\Program Files\Java\jdk1.8.0_92\jre\bin\java.dll
+0x6f6c0000 - 0x6f6d3000 	C:\Program Files\Java\jdk1.8.0_92\jre\bin\zip.dll
+0x75d30000 - 0x76df5000 	C:\Windows\system32\SHELL32.dll
+0x77410000 - 0x77546000 	C:\Windows\SYSTEM32\combase.dll
+0x757a0000 - 0x757e0000 	C:\Windows\system32\SHLWAPI.dll
+0x76fe0000 - 0x77055000 	C:\Windows\system32\SHCORE.dll
+0x74b90000 - 0x74ba1000 	C:\Windows\SYSTEM32\profapi.dll
+0x6eae0000 - 0x6ec09000 	C:\Windows\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+java_command: org.netbeans.modules.web.project.ant.JspCSingle -uriroot C:\Users\ESCOLA\Documents\NetBeansProjects\ProjetoWeb\build\web -d C:\Users\ESCOLA\Documents\NetBeansProjects\ProjetoWeb\build\generated\src -die1 -schemas /resources/schemas/ -dtds /resources/dtds/ -sysClasspath C:\Program Files\NetBeans 8.1\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.1\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans 8.1\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans 8.1\enterprise\modules\ext\jstl-impl.jar;C:\Program Files\NetBeans 8.1\enterprise\modules\ext\jsf-2_2\javax.faces.jar -jspc.files C:\Users\ESCOLA\Documents\NetBeansProjects\ProjetoWeb\build\web\index.jsp -compilerSourceVM 1.7 -compilerTargetVM 1.7 -javaEncoding UTF-8
+java_class_path (initial): C:\Program Files\Java\jdk1.8.0_92\lib\tools.jar;C:\Program Files\NetBeans 8.1\enterprise\ant\extra\jspcompile.jar;C:\Program Files\NetBeans 8.1\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.1\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans 8.1\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans 8.1\enterprise\modules\ext\jsf-2_2\javax.faces.jar;C:\Program Files\NetBeans 8.1\enterprise\modules\ext\jstl-api.jar;C:\Program Files\NetBeans 8.1\extide\ant\lib\ant-launcher.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+USERNAME=ESCOLA
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8 Build 9200 (6.2.9200.16384)
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, tsc
+
+Memory: 4k page, physical 3634228k(2254876k free), swap 7304244k(5702556k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.92-b14) for windows-x86 JRE (1.8.0_92-b14), built on Mar 31 2016 21:09:21 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Jul 26 13:18:23 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
